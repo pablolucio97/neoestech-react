@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { techs, TTech } from "../../mocks/techs";
-import TechCard from "../TechCard";
+import TechCard from "./components/TechCard";
 
 const Exercise6: React.FC = () => {
   const [technologies, setTechnologies] = useState<TTech[]>(techs);
 
   //alterando um único elemento
-  const updateSingleElement = (elementId: string) => {
+  const handleUpdateSingleElement = (elementId: string) => {
     setTechnologies((prevState) =>
       prevState.map((item) =>
         item.id === elementId ? { ...item, technology: "NextJS" } : item
@@ -15,10 +15,14 @@ const Exercise6: React.FC = () => {
   };
 
   //alterando multiplos elementos
-  const updateMultipleElements = () => {
+  const handleUpdateMultipleElements = () => {
     setTechnologies((prevState) =>
       prevState.map((item) => ({ ...item, isUsed: !item.isUsed }))
     );
+  };
+
+  const handleResetState = () => {
+    setTechnologies(techs);
   };
 
   return (
@@ -29,10 +33,13 @@ const Exercise6: React.FC = () => {
           key={tech.id}
           technology={tech.technology}
           isUsed={tech.isUsed}
-          onUpdate={() => updateSingleElement(tech.id)}
+          onUpdate={() => handleUpdateSingleElement(tech.id)}
         />
       ))}
-      <button onClick={updateMultipleElements}>Update multiple elements</button>
+      <button onClick={handleUpdateMultipleElements}>
+        Update multiple elements
+      </button>
+      <button onClick={handleResetState}>Reset state</button>
     </>
   );
 };
