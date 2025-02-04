@@ -27,7 +27,7 @@ const Exercise6: React.FC = () => {
 
   return (
     <>
-      <p>Exercise 6</p>
+      <p>React Exercise 6</p>
       {technologies.map((tech) => (
         <TechCard
           key={tech.id}

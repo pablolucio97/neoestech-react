@@ -30,7 +30,7 @@ const Exercise5: React.FC = () => {
 
   return (
     <>
-      <p>Exercise 5</p>
+      <p>React Exercise 5</p>
       <CompanyCard
         company={company}
         onUpdateCompany={handleUpdateCompany}

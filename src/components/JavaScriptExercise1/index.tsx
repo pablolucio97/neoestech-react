@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { checkAnagrams } from "../../utils/checkAnagram";
 
-const JavaScriptExercise1 = () => {
+const JavaScriptExercise1: React.FC = () => {
   const [firstWord, setFirstWord] = useState("");
   const [secondWord, setSecondWord] = useState("");
   const [wordsAreAnagrams, setWordsAreAnagrams] = useState(false);
@@ -18,6 +18,7 @@ const JavaScriptExercise1 = () => {
 
   return (
     <div>
+      <p>JavaScript Exercise 1</p>
       <input
         type="text"
         value={firstWord}
