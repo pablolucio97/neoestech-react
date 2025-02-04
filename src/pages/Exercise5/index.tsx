@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "../../components/Header";
+import Title from "../../components/Title";
 import { companyObj, TCompany } from "../../mocks/company";
 import CompanyCard from "./components/CompanyCard";
 
@@ -32,6 +33,7 @@ const Exercise5: React.FC = () => {
   return (
     <div className="flex flex-col w-screen h-screen items-center pt-40">
       <Header pageTitle="React Exercise 5" />
+      <Title title="Updating objects" />
       <CompanyCard
         company={company}
         onUpdateCompany={handleUpdateCompany}

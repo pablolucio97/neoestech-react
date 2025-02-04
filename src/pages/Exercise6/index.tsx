@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "../../components/Header";
 import { techs, TTech } from "../../mocks/techs";
 import TechCard from "./components/TechCard";
+import Title from "../../components/Title";
 
 const Exercise6: React.FC = () => {
   const [technologies, setTechnologies] = useState<TTech[]>(techs);
@@ -29,6 +30,7 @@ const Exercise6: React.FC = () => {
   return (
     <div className="flex flex-col w-screen h-screen items-center pt-40">
       <Header pageTitle="React Exercise 6" />
+      <Title title="Updating arrays" />
       {technologies.map((tech) => (
         <TechCard
           key={tech.id}

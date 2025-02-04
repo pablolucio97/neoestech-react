@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import Header from "../../components/Header";
+import Title from "../../components/Title";
 import { IOption, mockedArrays } from "../../mocks/arrays";
 
 class ListNode {
@@ -79,20 +80,24 @@ const JavaScriptExercise2: React.FC = () => {
   return (
     <div className="flex flex-col w-screen h-screen items-center pt-40">
       <Header pageTitle="JavaScript Exercise 2" />
-      <select
-        value={selectedArray ? selectedArray.label : ""}
-        onChange={handleSelectArray}
-      >
-        <option label="Select an option">-</option>
-        {mockedArrays.map((arr, i) => (
-          <option key={i} value={i.toString()}>
-            {arr.label}
-          </option>
-        ))}
-      </select>
-      <span className="mt-6 mb-2 text-md md:text-lg">
-        Array containing only unique values: {uniqueArray.join(",")}
-      </span>
+      <Title title="Removing duplicate nodes" />
+      <div className="w-[95%] md:w-[40rem] flex flex-col bg-gray-50 p-4 rounded-lg shadow-md mb-3">
+        <select
+          value={selectedArray ? selectedArray.label : ""}
+          onChange={handleSelectArray}
+          className="h-12 outline-none"
+        >
+          <option label="Select an option">-</option>
+          {mockedArrays.map((arr, i) => (
+            <option key={i} value={i.toString()}>
+              {arr.label}
+            </option>
+          ))}
+        </select>
+        <span className="mt-6 mb-2 text-md md:text-lg">
+          Array containing only unique values: {uniqueArray.join(",")}
+        </span>
+      </div>
       <button onClick={handleResetState}>Reset state</button>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "../../components/Header";
+import Title from "../../components/Title";
 import { checkAnagrams } from "../../utils/checkAnagram";
 
 const JavaScriptExercise1: React.FC = () => {
@@ -24,6 +25,7 @@ const JavaScriptExercise1: React.FC = () => {
   return (
     <div className="flex flex-col w-screen h-screen items-center pt-40">
       <Header pageTitle="JavaScript Exercise 1" />
+      <Title title="Checking anagrams" />
       <div className="w-[95%] md:w-[40rem] flex flex-col bg-gray-50 p-4 rounded-lg shadow-md mb-3">
         <input
           type="text"

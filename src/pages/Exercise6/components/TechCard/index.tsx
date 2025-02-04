@@ -28,7 +28,7 @@ const TechCard: React.FC<TechCardProps> = ({
           className="w-full bg-orange-400 text-white font-bold mt-3"
           onClick={onUpdate}
         >
-          Update to "NextJS"
+          Update single element to "NextJS"
         </button>
       )}
     </div>
