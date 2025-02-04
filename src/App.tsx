@@ -1,6 +1,7 @@
 import "./App.css";
 import Exercise5 from "./components/Exercise5";
 import Exercise6 from "./components/Exercise6";
+import JavaScriptExercise1 from "./components/JavaScriptExercise1";
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
       <Exercise5 />
       <hr />
       <Exercise6 />
+      <hr />
+      <JavaScriptExercise1 />
     </>
   );
 }
