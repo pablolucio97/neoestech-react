@@ -12,14 +12,31 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
   onUpdateCompanyDetails,
 }) => {
   return (
-    <div>
-      <p>Company: {company.name}</p>
-      <p>Segment: {company.segment}</p>
-      <span>Details:</span>
-      <p>ZipCode: {company.details.zipCode}</p>
-      <p>Number of employees: {company.details.numberOfEmployees}</p>
-      <button onClick={onUpdateCompany}>Update company</button>
-      <button onClick={onUpdateCompanyDetails}>Update company details</button>
+    <div className="w-[95%] md:w-[40rem] flex flex-col bg-gray-50 p-4 rounded-lg shadow-md mb-3">
+      <span className="mb-2 text-md md:text-lg font-bold">Basic info</span>
+      <span className="mb-2 text-md md:text-lg">Company: {company.name}</span>
+      <span className="mb-2 text-md md:text-lg">
+        Segment: {company.segment}
+      </span>
+      <span className="mb-2 text-md md:text-lg font-bold">Details</span>
+      <span className="mb-2 text-md md:text-lg">
+        ZipCode: {company.details.zipCode}
+      </span>
+      <span className="mb-2 text-md md:text-lg">
+        Number of employees: {company.details.numberOfEmployees}
+      </span>
+      <button
+        className="my-3 w-full bg-orange-400 text-white font-bold"
+        onClick={onUpdateCompany}
+      >
+        Update company
+      </button>
+      <button
+        className="w-full bg-orange-400 text-white font-bold"
+        onClick={onUpdateCompanyDetails}
+      >
+        Update company details
+      </button>
     </div>
   );
 };

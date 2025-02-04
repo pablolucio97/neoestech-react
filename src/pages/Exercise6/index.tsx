@@ -37,7 +37,7 @@ const Exercise6: React.FC = () => {
           onUpdate={() => handleUpdateSingleElement(tech.id)}
         />
       ))}
-      <button onClick={handleUpdateMultipleElements}>
+      <button className="my-3" onClick={handleUpdateMultipleElements}>
         Update multiple elements
       </button>
       <button onClick={handleResetState}>Reset state</button>

@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ pageTitle }) => {
   };
 
   return (
-    <header className="w-full h-[5rem] flex items-center bg-gradient-to-r bg-[#EC6724] p-4 fixed top-0 left-0">
+    <header className="w-full flex items-center bg-gradient-to-r bg-[#EC6724] py-3 px-4 fixed top-0 left-0">
       <div className="w-[1080px] flex items-center justify-between mx-auto">
         <div className="flex items-center">
           {location.pathname !== "/" && (
@@ -24,14 +24,13 @@ const Header: React.FC<HeaderProps> = ({ pageTitle }) => {
               className="text-white mr-1"
               data-testid="header-component-go-back-button"
             >
-              <MdArrowBack className="w-5 h-5 md:w-8 md:h-8" />
+              <MdArrowBack className="w-7 h-7 md:w-9 md:h-9" />
             </button>
           )}
           <img src={logoSvg} alt="logo-neoestech" />
         </div>
         <span
-          className="text-lg md:text-xl text-white font-bold"
-          data-testid="header-page-title"
+          className="text-md md:text-xl text-white font-bold mr-2"
         >
           {pageTitle}
         </span>
