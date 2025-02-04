@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Header from "../../components/Header";
 
 const JavaScriptExercise2: React.FC = () => {
   const [uniqueArray, setUniqueArray] = useState<number[]>([]);
@@ -56,7 +57,8 @@ const JavaScriptExercise2: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col w-screen h-screen items-center pt-40">
+      <Header pageTitle="JavaScript Exercise 2" />
       <p>JavaScript Exercise 2</p>
       <button onClick={handleShowUniqueArray}>Show unique array</button>
       <p>{uniqueArray.map((val, i) => (i !== 0 ? "," + val : val))}</p>

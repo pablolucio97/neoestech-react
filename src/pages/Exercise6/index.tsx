@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Header from "../../components/Header";
 import { techs, TTech } from "../../mocks/techs";
 import TechCard from "./components/TechCard";
 
@@ -26,8 +27,8 @@ const Exercise6: React.FC = () => {
   };
 
   return (
-    <>
-      <p>React Exercise 6</p>
+    <div className="flex flex-col w-screen h-screen items-center pt-40">
+      <Header pageTitle="React Exercise 6" />
       {technologies.map((tech) => (
         <TechCard
           key={tech.id}
@@ -40,7 +41,7 @@ const Exercise6: React.FC = () => {
         Update multiple elements
       </button>
       <button onClick={handleResetState}>Reset state</button>
-    </>
+    </div>
   );
 };
 

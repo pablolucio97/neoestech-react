@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Header from "../../components/Header";
 import { companyObj, TCompany } from "../../mocks/company";
 import CompanyCard from "./components/CompanyCard";
 
@@ -29,15 +30,15 @@ const Exercise5: React.FC = () => {
   };
 
   return (
-    <>
-      <p>React Exercise 5</p>
+    <div className="flex flex-col w-screen h-screen items-center pt-40">
+      <Header pageTitle="React Exercise 5" />
       <CompanyCard
         company={company}
         onUpdateCompany={handleUpdateCompany}
         onUpdateCompanyDetails={handleUpdateCompanyDetails}
       />
       <button onClick={handleResetState}>Reset state</button>
-    </>
+    </div>
   );
 };
 
